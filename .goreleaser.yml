@@ -1,0 +1,28 @@
+project_name: ipmnemonic
+before:
+  hooks:
+    - go mod download
+builds:
+-
+  main: ./cmd/ipmnemonic/main.go
+  ldflags: |
+    -X github.com/cv/ipmnemonic/pkg/ipmnemonic.Version={{.Version}}
+    -X github.com/cv/ipmnemonic/pkg/ipmnemonic.Revision={{.ShortCommit}}
+  goarch:
+    - amd64
+  goos:
+    - linux
+    - darwin
+
+checksum:
+  name_template: 'checksums.txt'
+
+snapshot:
+  name_template: "{{ .Tag }}-next"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
