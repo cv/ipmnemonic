@@ -53,6 +53,6 @@ If you have a Go environment installed on your machine:
 go get -u github.com/cv/ipmnemonic
 ```
 
-Otherwise, grab a binary release from the [Releases](https://github.com/cv/ipmnemonic/releases) tab.
+Otherwise, grab a binary release from the [Releases](https://github.com/cv/ipmneumonic/releases) tab.
 
 Enjoy! :smile:
